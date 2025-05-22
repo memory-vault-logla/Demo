@@ -903,4 +903,4 @@ setTimeout(()=>{
   </p>
        `;
   notice_f(heading,body);
-},30)
+},3000)
