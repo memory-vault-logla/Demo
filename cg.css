@@ -378,6 +378,22 @@ border-bottom-right-radius: 50%;
   height: 100%;
   background-color: #00ffff00;
 }
+.music_space{
+  width: 5vh;
+  height: 5vh;
+  background-color: #00000000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.music_space i{
+  font-size: 2vh;
+  text-shadow: 0 0 0.5vh #000000aa;
+  color: #fff;
+}
 .friends_list_space{
   margin-top: 2vh;
   width: 100vw;
