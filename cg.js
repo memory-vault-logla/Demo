@@ -215,6 +215,23 @@ function friend_list_creation(){
 function slide_show_creation(){
   const slide_show=document.querySelector(" .slide_show");
   const slide=document.querySelector(".slide");
+     const music_space=document.querySelector(" .music_space");
+  const music = document.querySelector('.music');
+    let isPlaying = false;
+    music_space.addEventListener('click', () => {
+      if (!isPlaying) {
+        music.play();
+        setTimeout(()=>{
+          music.play();
+        },100)
+        music_space.innerHTML=` <i class="fa-solid fa-volume-high"></i>`;
+        console.log("play")
+      } else {
+        music.pause();
+        music_space.innerHTML=` <i class="fa-solid fa-volume-xmark"></i>`;
+      }
+      isPlaying = !isPlaying;
+    });
   const slide_move_left=document.querySelector(" .slide_move_left");
   const slide_move_right=document.querySelector(" .slide_move_right");
   let i=1;
