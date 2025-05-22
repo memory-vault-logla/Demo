@@ -384,7 +384,7 @@ info_space_box_c.append(info_space_box_c_open);
   info_space_box_cs_name.innerText=i_cs[i][j];
  info_space_box_cs_name.addEventListener("click",()=>{
  //  info_space_box_cs_name.innerText=`${i_cs[i][j]} +`;
- h="Page Movite";
+ h="Page Motive";
  b=`The purpose of this page is to offer a preview of what <strong>College Gang</strong> is all about — a platform created to <strong>preserve college and school memories</strong> in one beautiful space. <br><br>
 
   From <strong>photos</strong> and <strong>favorite things</strong> to heartfelt <strong>messages from friends</strong>, every gang (group of friends) gets their own vault to relive their journey together. <br><br>
