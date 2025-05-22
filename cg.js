@@ -813,82 +813,78 @@ function search_page_creation(ss){
   })
 }
 
-function login_page_creation(){
-  const name="Y29sbGVnZSBnYW5n";
-  const password="I2JvbmQtMjAyMw==";
-  const login_page=document.querySelector(".login_page");
-  const home_page=document.querySelector(".home_page");
-  //const home_page_content=home_page.innerHTML;
-  //home_page.innerHTML="";
- const l_p_gang_slide_text_name=document.querySelector(".l_p_gang_slide_text_name");
-const l_p_gang_slide_text_password=document.querySelector(".l_p_gang_slide_text_password");
-l_p_gang_slide_text_name.value="College gang";
-l_p_gang_slide_text_password.value="#bond-2023";
-const l_p_gang_slide_dis_p_eye=document.querySelector(".l_p_gang_slide_dis_p_eye");
-let eye=true;
-l_p_gang_slide_dis_p_eye.addEventListener("click",()=>{
-  
-  if(eye){
-    l_p_gang_slide_dis_p_eye.innerHTML=`
-    <i class="fa-solid fa-eye"></i> `;
-    //console.log("eye@");
-    l_p_gang_slide_text_password.type = "text";
-    eye=false;
-  }
-  else{
-    l_p_gang_slide_dis_p_eye.innerHTML=` <i class="fa-solid fa-eye-slash"></i>`;
-   // console.log("eye #");
-    eye=true;
-    l_p_gang_slide_text_password.type = "password";
-  }
-})
+function login_page_creation() {
+  const name = "TWVtb3J5IFZhdWx0"; // "Memory Vault"
+  const password = "I3NlY3JldC0yMDI1"; // "#secret-2025"
 
-const login_page_notify=document.querySelector(".login_page_notify");
+  const login_page = document.querySelector(".login_page");
+  const home_page = document.querySelector(".home_page");
 
-const l_p_submit_btn=document.querySelector(".l_p_submit_btn");
-l_p_submit_btn.addEventListener("click",()=>{
- u_name= btoa(l_p_gang_slide_text_name.value.toLowerCase().trim());
-u_password= btoa(l_p_gang_slide_text_password.value.trim());
- const shack=()=>{
-   login_page_notify.style.paddingLeft="5vh";
-   setTimeout(()=>{
-     login_page_notify.style.padding="0vh";
-     login_page_notify.style.paddingRight="5vh";
-     setTimeout(()=>{
-     login_page_notify.style.padding="0vh";
-   },200)
-   },200)
- }
- shack();
- login_page_notify.innerText="";
- if(u_name){
-  if(u_name==name){
-    if(u_password){
-      if(u_password==password){
-        login_page.style.display="none";
-      //  home_page.innerHTML=home_page_content;
-        home_page.style.display="flex";
-        friend_list_creation();
-        slide_show_creation();
-        info_box_creation();
-        search_page_transport();
-      }
-      else{
-        login_page_notify.innerText=`"Please enter valid password!"`;
-      }
+  const l_p_gang_slide_text_name = document.querySelector(".l_p_gang_slide_text_name");
+  const l_p_gang_slide_text_password = document.querySelector(".l_p_gang_slide_text_password");
+  l_p_gang_slide_text_name.value = atob(name);
+  l_p_gang_slide_text_password.value = atob(password);
+
+  const l_p_gang_slide_dis_p_eye = document.querySelector(".l_p_gang_slide_dis_p_eye");
+  let eye = true;
+
+  l_p_gang_slide_dis_p_eye.addEventListener("click", () => {
+    if (eye) {
+      l_p_gang_slide_dis_p_eye.innerHTML = `<i class="fa-solid fa-eye-slash"></i>`;
+      l_p_gang_slide_text_password.type = "text";
+    } else {
+      l_p_gang_slide_dis_p_eye.innerHTML = `<i class="fa-solid fa-eye"></i>`;
+      l_p_gang_slide_text_password.type = "password";
     }
-    else{
-      login_page_notify.innerText=`"Please enter password!"`;
+    eye = !eye;
+  });
+
+  const login_page_notify = document.querySelector(".login_page_notify");
+  const l_p_submit_btn = document.querySelector(".l_p_submit_btn");
+
+  l_p_submit_btn.addEventListener("click", () => {
+    const u_name = btoa(l_p_gang_slide_text_name.value.trim());
+    const u_password = btoa(l_p_gang_slide_text_password.value.trim());
+
+    const shack = () => {
+      login_page_notify.style.paddingLeft = "5vh";
+      setTimeout(() => {
+        login_page_notify.style.padding = "0vh";
+        login_page_notify.style.paddingRight = "5vh";
+        setTimeout(() => {
+          login_page_notify.style.padding = "0vh";
+        }, 200);
+      }, 200);
+    };
+
+    shack();
+    login_page_notify.innerText = "";
+
+    if (u_name) {
+      if (u_name == name) {
+        if (u_password) {
+          if (u_password == password) {
+            login_page.style.display = "none";
+            home_page.style.display = "flex";
+            friend_list_creation();
+            slide_show_creation();
+            info_box_creation();
+            search_page_transport();
+          } else {
+            login_page_notify.innerText = "Please enter valid password!";
+          }
+        } else {
+          login_page_notify.innerText = "Please enter password!";
+        }
+      } else {
+        login_page_notify.innerText = "Please enter valid gang name!";
+      }
+    } else {
+      login_page_notify.innerText = "Please enter gang name!";
     }
-  }
-  else{
-    login_page_notify.innerText=`"Please enter valid gang name!"`;
-  }
- }
- else{
-   login_page_notify.innerText=`"Please enter gang name!"`;
- }
-})
+
+  //  console.log(name, u_name, password, u_password);
+  });
 }
 login_page_creation();
 
