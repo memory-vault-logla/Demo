@@ -1280,7 +1280,7 @@ border-bottom-right-radius: 50%;
   display: none;
 }
 .notic{
-  width: 42vh;
+  width: 44vh;
   min-height: 0vh;
   background-color: #ffffff;
   border-radius: 2vh;
@@ -1288,7 +1288,7 @@ border-bottom-right-radius: 50%;
   flex-wrap: wrap;
   flex-direction: column;
   padding-bottom: 2vh;
-  border: 1vh double var(--bg-b-color);
+  border: 0vh double var(--bg-b-color);
   box-shadow: 0.4vh 0.4vh 1vh #00000099;
   transition: all 0.5s;
 }
@@ -1303,6 +1303,7 @@ border-bottom-right-radius: 50%;
   }
 }
 .notic_head{
+  margin-top: 1vh;
   width: 95%;
   height: 7vh;
   background-color: #00000000;
@@ -1310,11 +1311,11 @@ border-bottom-right-radius: 50%;
   justify-content: center;
   align-items: center;
   padding: 0vh;
-  padding-left: 2vh;
-  padding-right: 2vh;
+  padding-left: 4vh;
+  padding-right: 4vh;
   margin-left: 1vh;
   margin-right: 1vh;
-  border-bottom: 0.3vh double #77777799;
+  border-bottom: 0.18vh solid #77777799;
   font-size: 4vh;
   font-weight: 800;
   color: #011b30;
@@ -1328,7 +1329,7 @@ border-bottom-right-radius: 50%;
   overflow-x: auto;
   background-color: #00000000;
   margin: 1vh;
-  padding: 0.5vh;
+  padding: 1vh;
   font-size: 2.2vh;
   font-weight: 500;
   text-align: left;
