@@ -879,7 +879,7 @@ login_page_creation();
 setTimeout(()=>{
   const promo_space=document.querySelector(".promo_space");
   promo_space.style.display="none";
- let heading=`Notice`;
+ let heading=`About`;
   let body=`
 <p>
     This is a <strong>demo version</strong> of <strong>College Gang</strong> — a memory vault platform where friends can store and relive their favorite college and school memories forever.
